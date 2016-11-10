@@ -17,3 +17,18 @@ $ ionic run ios
 src/theme/variables.scss contains the theme colors
 The variables favorite, menubg and themebg can be changed for desired effect
 ```
+
+
+CORRER LA APP
+
+Instalar Node.js 6.x
+
+npm install -g ionic@beta cordova
+
+dirigirse a la carpeta donde tiene el proyecto usando cd
+
+instalar dependencias con:
+npm install
+
+ejecutar la app con:
+ionic serve
