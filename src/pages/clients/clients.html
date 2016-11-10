@@ -1,0 +1,45 @@
+<ion-header>
+	<ion-toolbar color="danger">
+		<button ion-button color="light" (click)="goBackToProfile();">
+			<ion-icon class="custom-icon back-icon"></ion-icon>
+		</button>
+		<ion-title>
+			Clients
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="profile" no-scroll>
+
+	<ion-card>
+		<ion-row>
+			<ion-col width-100>
+				<button ion-button color="light" block icon-right (click)="addClient();">
+					Nuevo Cliente
+					<ion-icon name="add-circle"></ion-icon>
+				</button>
+			</ion-col>
+		</ion-row>
+
+	</ion-card>
+
+	<ion-item>
+		<ion-row>
+			<ion-col width-100>
+				<ion-searchbar [(ngModel)]="searchName"></ion-searchbar>
+			</ion-col>
+		</ion-row>
+
+	</ion-item>
+
+	<ion-list class="product-list">
+		<ion-item *ngFor="let item of clientsData | filter: searchName">
+		  <ion-thumbnail item-left>
+		  	<img src="assets/imgs/default-avatar-clients.png">
+		  </ion-thumbnail>
+		  <h2>{{item.Nombre}}</h2>
+		  <ion-icon name="add" item-right class="margin-r" (click)="selectedClient(item);"></ion-icon>
+		  <ion-icon ios="ios-trash" md="md-trash" item-right></ion-icon>
+		</ion-item>
+	</ion-list>
+</ion-content>

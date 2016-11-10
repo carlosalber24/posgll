@@ -1,0 +1,69 @@
+<ion-content class="login">
+	<span class="login-logo"></span>
+	<h2>Login</h2>
+
+  <ion-list no-lines>
+    <form [formGroup]="authForm" (submit)="login(authForm.value)" novalidate>
+      <ion-item>
+        <ion-input placeholder="Username"  formControlName="username" type="text"></ion-input>
+      </ion-item>
+      <!--<p [hidden]="username.valid || submitted == false" danger padding-left>
+        Username is required
+      </p>-->
+
+      <ion-item>
+        <ion-input  placeholder="Password" formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <!--<p [hidden]="password.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>-->
+
+
+      <ion-grid>
+			  <ion-row>
+					<ion-col width-50 text-left>
+						<a href="#">Register</a>
+					</ion-col>
+
+					<ion-col width-50 text-right>
+						<a href="#">Forgot Password</a>
+					</ion-col>
+			  </ion-row>
+			</ion-grid>
+
+
+      <ion-row responsive-sm>
+        <ion-col>
+          <button ion-button color="light" clear block  type="submit" [disabled]="!authForm.valid">Entrar</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+	<!--<div class="social-connect">
+		<h2>Connect using</h2>
+		<ion-list no-lines>
+			<ion-item>
+				<ion-grid>
+					<ion-row text-center>
+						<ion-col width-33>
+							<button ion-button clear color="light">
+								<ion-icon class="custom-icon twitter-white-icon"></ion-icon>
+							</button>
+						</ion-col>
+						<ion-col width-33>
+							<button ion-button  clear color="light">
+								<ion-icon class="custom-icon facebook-white-icon"></ion-icon>
+							</button>
+						</ion-col>
+						<ion-col width-33>
+							<button ion-button clear color="light">
+								<ion-icon class="custom-icon google-white-icon"></ion-icon>
+							</button>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-item>
+		</ion-list>
+	</div>-->
+
+</ion-content>

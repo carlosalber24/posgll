@@ -1,0 +1,140 @@
+<ion-header>
+	<ion-toolbar color="danger">
+		<button ion-button menuToggle>
+			<ion-icon class="custom-icon menu-toggle"></ion-icon>
+		</button>
+		<ion-title>
+			Ventas
+		</ion-title>
+
+		<!--<ion-buttons end>
+			<button ion-button clear color="light"  (click)="goToCart()">
+				<ion-icon class="custom-icon bar-cart-icon"></ion-icon>
+			</button>
+		</ion-buttons>-->
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="checkout" no-scroll>
+	<ion-toolbar clear no-border class="top-toolbar">
+		<ion-row>
+			<ion-col width-50>
+				<button (click)="goToProfile()" ion-button clear color="dark">
+					<ion-icon class="custom-icon back-icon"></ion-icon>
+					Regresar
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-toolbar>
+    
+    <ion-list>
+		<ion-item>
+			<h2 text-center>Grupo Llaneros</h2>
+		</ion-item>
+	</ion-list>
+
+	<div text-center class="address-top">
+		Área federal central de Abastos,
+		09819 Ciudad de México, D.F.
+	</div>
+
+	<ion-card class="credit-card-payment">
+		<h2>Fecha</h2>
+		<ion-row>
+			<ion-col width-100>
+				<label class="credit-card-input">
+					<input type="date" placeholder="Expiry Date" />
+					<ion-icon class="custom-icon calendar-icon"></ion-icon>
+				</label>
+			</ion-col>
+		</ion-row>
+
+	</ion-card>
+
+	<ion-card class="credit-card-payment">
+		<ion-row>
+			<ion-col width-50 item-left>
+				<ion-icon name="person" item-left></ion-icon>
+				Cliente
+			</ion-col>
+			<ion-col width-50 text-right item-right>
+				<ion-icon name="add-circle" (click)="goToClients();"></ion-icon>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col width-50>
+				<label class="credit-card-input">
+					<span class="total-clients">3</span> <span class="text-clients">clientes agregados</span>
+				</label>
+			</ion-col>
+
+			<ion-col width-50 text-right item-right>
+				<ion-icon name="eye"></ion-icon>
+			</ion-col>
+		</ion-row>
+
+	</ion-card>
+
+	<ion-card class="cart-shipping">
+		<ion-row>
+			<ion-col width-50 item-left>
+				<ion-icon name="cart" item-left></ion-icon>
+				<span class="total-clients">3</span> Productos
+			</ion-col>
+			<ion-col width-50 text-right item-right>
+				<ion-icon name="add-circle" (click)="goToClients();"></ion-icon>
+			</ion-col>
+		</ion-row>
+
+		<ion-list>
+    		<ion-item>
+      			<ion-thumbnail item-left>
+        			<img src="assets/imgs/melon1.png">
+      			</ion-thumbnail>
+      			<h2>Melón Gala</h2>
+				<h2>Disponibles <span class="total-clients">15</span></h2>
+    		</ion-item>
+
+			<ion-item>
+      			<ion-thumbnail item-left>
+        			<img src="assets/imgs/melon2.png">
+      			</ion-thumbnail>
+      			<h2>Melón Chino</h2>
+				<h2>Disponibles <span class="total-clients">15</span></h2>
+    		</ion-item>
+
+			<ion-item>
+      			<ion-thumbnail item-left>
+        			<img src="assets/imgs/manzana1.png">
+      			</ion-thumbnail>
+      			<h2>Manzana Roja</h2>
+				<h2>Disponibles <span class="total-clients">15</span></h2>
+    		</ion-item>
+  		</ion-list>
+	</ion-card>
+
+    <ion-list class="cart-summary">
+		<ion-item>
+			<ion-row>
+				<ion-col width-50 text-right>
+					<div>Total Productos :</div>
+					<div>Subtotal :</div>
+					<div><strong>Total :</strong></div>
+				</ion-col>
+
+				<ion-col width-50>
+					<div>3</div>
+					<div>$ 3850</div>
+					<div><strong>$ 4100</strong></div>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+	</ion-list>
+
+</ion-content>
+
+<ion-footer>
+	<button ion-button color="secondary" full>
+		PAY NOW
+	</button>
+</ion-footer>
