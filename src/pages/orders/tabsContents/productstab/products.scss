@@ -24,6 +24,15 @@ products-content {
       display: none;
     }
 
+    .segment-ios .segment-button.segment-activated{
+      background: none !important;
+    }
+
+    .segment-ios .segment-button{
+      border-color: white !important;
+      color: white !important;
+    }
+
     .segment-md .segment-button.segment-activated{
         border-color: white !important;
         color: white !important;

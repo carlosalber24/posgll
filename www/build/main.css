@@ -34303,6 +34303,15 @@ products-content .orders .item-cover {
   display: none;
 }
 
+products-content .orders .segment-ios .segment-button.segment-activated {
+  background: none !important;
+}
+
+products-content .orders .segment-ios .segment-button {
+  border-color: white !important;
+  color: white !important;
+}
+
 products-content .orders .segment-md .segment-button.segment-activated {
   border-color: white !important;
   color: white !important;
