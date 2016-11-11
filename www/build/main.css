@@ -34304,7 +34304,8 @@ products-content .orders .item-cover {
 }
 
 products-content .orders .segment-ios .segment-button.segment-activated {
-  background: none !important;
+  background: white !important;
+  color: black !important;
 }
 
 products-content .orders .segment-ios .segment-button {
