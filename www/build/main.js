@@ -34735,11 +34735,12 @@ var SettingsContent = (function () {
     };
     SettingsContent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Component */])({
-            selector: 'settings-content',template:/*ion-inline-start:"C:\Users\carlo\Desktop\Devs Not-Shared\grupoLlaneroApp\src\pages\orders\tabsContents\settingstab\settings.html"*/'<ion-content class="orders">\n\n	<ion-header>\n	<ion-toolbar color="main">\n		<ion-buttons start>\n			<button ion-button color="royal" (click)="goBackToOrders();">\n				<ion-icon name="arrow-back"></ion-icon>\n			</button>\n		</ion-buttons>\n		<ion-title>Settings</ion-title>\n	</ion-toolbar>\n</ion-header>\n\n  \n\n</ion-content>\n'/*ion-inline-end:"C:\Users\carlo\Desktop\Devs Not-Shared\grupoLlaneroApp\src\pages\orders\tabsContents\settingstab\settings.html"*/
+            selector: 'settings-content',template:/*ion-inline-start:"C:\Users\carlo\Desktop\Devs Not-Shared\grupoLlaneroApp\src\pages\orders\tabsContents\settingstab\settings.html"*/'<ion-content class="orders">\n\n	<ion-header>\n	<ion-toolbar color="main">\n		<ion-buttons start>\n			<button ion-button color="royal" (click)="goBackToOrders();">\n				<ion-icon name="arrow-back"></ion-icon>\n			</button>\n		</ion-buttons>\n		<ion-title>Configuración</ion-title>\n	</ion-toolbar>\n</ion-header>\n\n  \n\n</ion-content>\n'/*ion-inline-end:"C:\Users\carlo\Desktop\Devs Not-Shared\grupoLlaneroApp\src\pages\orders\tabsContents\settingstab\settings.html"*/
         }), 
-        __metadata('design:paramtypes', [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */]])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* NavController */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */]) === 'function' && _c) || Object])
     ], SettingsContent);
     return SettingsContent;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=settings.component.js.map
 
