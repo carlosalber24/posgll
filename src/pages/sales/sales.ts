@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, NavParams} from 'ionic-angular';
 import {ProfilePage} from '../../pages/profile/profile';
 import {ClientsPage} from '../../pages/clients/clients';
+import {ProductsPage} from '../../pages/products/products';
 
 @Component({
   selector: 'page-sales',
@@ -10,8 +11,16 @@ import {ClientsPage} from '../../pages/clients/clients';
 export class SalesPage {
 
   public salesData = {};
+  private clientData = { name: '', id: '', email: ''};
 
-  constructor(public nav: NavController) {}
+  constructor(
+    public nav: NavController,
+    private navParams: NavParams
+    ) {
+      this.clientData.name = navParams.get('Nombre');
+      this.clientData.id = navParams.get('ID');
+      this.clientData.email = navParams.get('Email');
+    }
 
   goToProfile(){
     this.nav.setRoot(ProfilePage);
@@ -19,5 +28,9 @@ export class SalesPage {
 
   goToClients(){
      this.nav.setRoot(ClientsPage);
+  }
+
+  goToProducts(){
+     this.nav.setRoot(ProductsPage, this.clientData);
   }
 }

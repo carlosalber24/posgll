@@ -10,6 +10,7 @@ import {CartPage} from '../pages/cart/cart';
 import {CheckoutPage} from '../pages/checkout/checkout';
 import {SalesPage} from '../pages/sales/sales';
 import {ClientsPage} from '../pages/clients/clients';
+import {ProductsPage} from '../pages/products/products';
 
 interface PageObj {
   title: string;
@@ -37,9 +38,10 @@ export class BazaarApp {
     { title: 'Cart', component: CartPage},
     { title: 'Checkout', component: CheckoutPage},
     { title: 'Sales', component: SalesPage},
-    { title: 'Clients', component: ClientsPage}
+    { title: 'Clients', component: ClientsPage},
+    { title: 'Products', component: ProductsPage}
   ];
-  rootPage: any = SalesPage;
+  rootPage: any = ProductsPage;
   constructor(
     public menu: MenuController,
     platform: Platform

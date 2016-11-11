@@ -31615,6 +31615,125 @@ page-productl .product-list footer .rating ion-icon.rating-color {
   color: #ffc600;
 }
 
+page-products .selected-product {
+  color: #29aae9;
+}
+
+page-products .item-cover {
+  display: none;
+}
+
+page-products input[type="text"], page-products input[type="number"] {
+  background: #fcfcfc;
+  border: solid 1px #bfbfbf;
+  height: 24px;
+  border-radius: 6px;
+  width: 100%;
+  padding: 0 24px 0 10px;
+  margin-bottom: 10px;
+  position: relative;
+  top: 8px;
+  left: -10px;
+  z-index: 1;
+}
+
+@media screen and (min-width: 600px) {
+  page-products input[type="text"], page-products input[type="number"] {
+    height: 35px;
+  }
+}
+
+page-products .product-list .item-md [item-right], page-products .product-list .item-ios [item-right] {
+  margin: 9px 10px 9px 0;
+}
+
+page-products .product-list .item {
+  margin: 0 5px 10px;
+  border: none !important;
+  box-shadow: 0 3px 2px #dcdcdc;
+  padding: 8px 8px 8px 5px;
+  width: auto;
+  font-size: 1em;
+}
+
+page-products .product-list .item .item-inner {
+  padding: 0;
+  border: none;
+}
+
+page-products .product-list .item ion-label {
+  white-space: normal;
+  margin: 0;
+}
+
+page-products .product-list ion-avatar {
+  width: 100px;
+  margin: 0 5px 0 0;
+  padding: 5px;
+}
+
+page-products .product-list ion-avatar img {
+  max-width: 43%;
+  max-height: 60%;
+}
+
+page-products .product-list header {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+page-products .product-list header h2 {
+  display: inline;
+  font-size: 13px;
+  margin: 0 5px 0 0;
+}
+
+page-products .product-list header ion-icon {
+  color: #29aae9;
+  font-size: 14px;
+  vertical-align: midlle;
+}
+
+page-products .product-list header .price {
+  float: right;
+  color: #ff5722;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+page-products .product-list p {
+  font-size: 10px;
+  line-height: 11px;
+  margin: 0;
+}
+
+page-products .product-list footer {
+  overflow: hidden;
+  margin-top: 3px;
+}
+
+page-products .product-list footer button {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+page-products .product-list footer .rating {
+  font-size: 9px;
+  margin-top: 8px;
+}
+
+page-products .product-list footer .rating ion-icon {
+  font-size: 11px;
+  vertical-align: middle;
+  color: #bfbdb9;
+  letter-spacing: -2px;
+  margin-top: -4px;
+}
+
+page-products .product-list footer .rating ion-icon.rating-color {
+  color: #ffc600;
+}
+
 page-profile .profile .toolbar[clear] .toolbar-background {
   background: transparent;
   border: none;

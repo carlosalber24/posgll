@@ -10,6 +10,7 @@ import {CartPage} from '../pages/cart/cart';
 import {CheckoutPage} from '../pages/checkout/checkout';
 import {SalesPage} from '../pages/sales/sales';
 import {ClientsPage} from '../pages/clients/clients';
+import {ProductsPage} from '../pages/products/products';
 import {FilterArrayPipe} from '../pipes/pipe-filter';
 
 @NgModule({
@@ -18,7 +19,7 @@ import {FilterArrayPipe} from '../pipes/pipe-filter';
     HomePage, LoginPage, ProfilePage,
     ProductlPage, ProductdPage,
     CartPage, CheckoutPage, SalesPage,
-    ClientsPage, FilterArrayPipe
+    ClientsPage, FilterArrayPipe, ProductsPage
   ],
   imports: [
     IonicModule.forRoot(BazaarApp)
@@ -29,7 +30,7 @@ import {FilterArrayPipe} from '../pipes/pipe-filter';
     HomePage, LoginPage, ProfilePage,
     ProductlPage, ProductdPage,
     CartPage, CheckoutPage, SalesPage,
-    ClientsPage
+    ClientsPage, ProductsPage
   ],
   providers: []
 

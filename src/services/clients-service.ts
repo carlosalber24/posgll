@@ -5,9 +5,11 @@ import {Http, Headers} from "@angular/http";
 export class ClientsService {
   
   private baseUrl: String = 'http://grupollaneros.azurewebsites.net';
-  public clients: Array<any> = [];
+  public headers: any;
 
   constructor(public http: Http) {
+    this.headers = new Headers();
+    this.headers.append('Content-Type', 'application/x-www-form-urlencoded');
   }
 
   /*
@@ -15,12 +17,8 @@ export class ClientsService {
   *
   */
   getClients(){
-
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
     return new Promise<any> ( resolve => { 
-      this.http.get(`${this.baseUrl}/services/v2/clientes`, {headers: headers})
+      this.http.get(`${this.baseUrl}/services/v2/clientes`, {headers: this.headers})
       .subscribe( data => { 
         let response =  data.json();
         resolve(response);
@@ -33,33 +31,12 @@ export class ClientsService {
   *
   */
   saveClient(userData){
-
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
     return new Promise<any> ( resolve => { 
-      this.http.post(`${this.baseUrl}/services/v2/clientes`, userData, {headers: headers})
+      this.http.post(`${this.baseUrl}/services/v2/clientes`, userData, {headers: this.headers})
       .subscribe( data => {
         let response =  data.json();
-        console.log(response);
+        resolve(response);
       });
     })
   }
-
-  /*
-  * Méthod to get selected clients
-  *
-  */
-  getSelectedClients(){
-    return this.clients;
-  }
-
-  /*
-  * Méthod to set selected clients
-  *
-  */
-  setSelectedClients(dataClients){
-    this.clients.push(dataClients);
-  }
-  
 }

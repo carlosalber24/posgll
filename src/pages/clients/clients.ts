@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController, AlertController} from 'ionic-angular';
+import {NavController, AlertController, ToastController} from 'ionic-angular';
 import {SalesPage} from '../../pages/sales/sales';
 import {ClientsService} from '../../services/clients-service';
 
@@ -13,11 +13,13 @@ export class ClientsPage {
 
   public clientsData: Array<any>;
   public searchName: String = '';
+  public dataToSend;
 
   constructor(
   public nav: NavController, 
   public clients: ClientsService,
-  public alertCtrl: AlertController
+  public alertCtrl: AlertController,
+  public toastCtrl: ToastController
   ) {
     this.getClients();
   }
@@ -77,10 +79,11 @@ export class ClientsPage {
   * params {Object} data
   */
   saveClient(data){
-    if(data.Email != "" && data.Name != ""){
-      this.clients.saveClient(data).then(data =>{
-       console.log(data)
-      this.showConfirm('!Hecho!', 'El cliente se registro satisfactoriamente');
+    if(data.Email != "" && data.Nombre != ""){
+      this.dataToSend = 'Apellido=algo&CreditoActual=0&CreditoMax=0&CreditoMin=0&DireccinOficina=465456&Email='+data.Email+'&EmailOficina=algo&Enable=true&Nombre='+data.Nombre+'&PersonaMoral=false&Telefono=12244&TelefonoOficina=ads&Password=1234'; 
+      this.clients.saveClient(this.dataToSend).then(data =>{
+       this.clientsData.push(data);
+       this.showConfirm('!Hecho!', 'El cliente se registró satisfactoriamente');
      })
     }else{
       this.showConfirm('Error', 'Por favor debe llenar todos los campos para guardar un cliente');
@@ -106,7 +109,11 @@ export class ClientsPage {
    * params {Object} selectedClient
    */
   selectedClient(selectedClient){
-    this.clients.setSelectedClients(selectedClient);
+    this.nav.setRoot(SalesPage, selectedClient);
+     let toast = this.toastCtrl.create({
+        message: 'Se ha agregado un cliente a la orden de compra',
+        duration: 4000
+      });
+      toast.present();
   }
-
 }

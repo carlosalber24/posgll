@@ -1,0 +1,115 @@
+page-products {
+   .selected-product{
+      color: #29aae9;
+    }
+
+    .item-cover{
+      display: none;
+    }
+
+    input[type="text"], input[type="number"]{
+      background:#fcfcfc;
+      border:solid 1px #bfbfbf;
+      height:24px;
+      border-radius:6px;
+      width: 100%;
+      padding: 0 24px 0 10px;
+      margin-bottom:10px;
+      position:relative;
+      top: 8px;
+      left: -10px;
+      z-index:1;
+
+     @media screen and (min-width: 600px) {
+        height:35px;
+        }
+      }
+  .product-list {
+    .item-md [item-right], .item-ios [item-right] {
+      margin: 9px 10px 9px 0;
+    }
+    .item {
+      margin:0 5px 10px;
+      border:none !important;
+      box-shadow: 0 3px 2px #dcdcdc;
+      padding:8px 8px 8px 5px;
+      width:auto;
+      font-size:1em;
+
+      .item-inner {
+        padding:0;
+        border:none;
+      }
+
+      ion-label {
+        white-space:normal;
+        margin:0;
+      }
+    }
+    ion-avatar {
+      width:100px;
+      margin:0 5px 0 0;
+      padding:5px;
+
+      img {
+        max-width: 43%;
+        max-height: 60%;
+      }
+    }
+
+    header {
+      overflow:hidden;
+      margin-bottom:5px;
+
+      h2 {
+        display:inline;
+        font-size:13px;
+        margin:0 5px 0 0;
+      }
+      ion-icon {
+        color: color($colors, primary);
+        font-size:14px;
+        vertical-align:midlle;
+      }
+      .price {
+        float:right;
+        color: color($colors, assertive);
+        font-weight:bold;
+        font-size:16px;
+      }
+    }
+
+    p {
+      font-size:10px;
+      line-height:11px;
+      margin:0;
+    }
+
+    footer {
+      overflow:hidden;
+      margin-top:3px;
+
+      button {
+        margin:0;
+        font-size:1.1rem;
+      }
+      .rating {
+        font-size:9px;
+        margin-top:8px;
+
+        ion-icon {
+          font-size:11px;
+          vertical-align:middle;
+          color:#bfbdb9;
+          letter-spacing:-2px;
+          margin-top:-4px;
+
+          &.rating-color {
+            color: color($colors, rating);
+          }
+
+        }
+      }
+    }
+  }
+}

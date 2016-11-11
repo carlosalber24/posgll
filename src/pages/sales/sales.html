@@ -62,14 +62,11 @@
 			</ion-col>
 		</ion-row>
 		<ion-row>
-			<ion-col width-50>
+			<ion-col width-100>
 				<label class="credit-card-input">
-					<span class="total-clients">3</span> <span class="text-clients">clientes agregados</span>
+					<span class="total-clients" *ngIf="clientData.name != undefined">Cliente Agregado: {{clientData.name}}</span>
+					<span class="total-clients" *ngIf="clientData.name == undefined">No se ha agregado ningún cliente</span>
 				</label>
-			</ion-col>
-
-			<ion-col width-50 text-right item-right>
-				<ion-icon name="eye"></ion-icon>
 			</ion-col>
 		</ion-row>
 
@@ -82,7 +79,7 @@
 				<span class="total-clients">3</span> Productos
 			</ion-col>
 			<ion-col width-50 text-right item-right>
-				<ion-icon name="add-circle" (click)="goToClients();"></ion-icon>
+				<ion-icon name="add-circle" (click)="goToProducts();"></ion-icon>
 			</ion-col>
 		</ion-row>
 
@@ -135,6 +132,6 @@
 
 <ion-footer>
 	<button ion-button color="secondary" full>
-		PAY NOW
+		FINALIZAR AHORA
 	</button>
 </ion-footer>
