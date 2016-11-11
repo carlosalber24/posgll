@@ -17,13 +17,7 @@ export class ClientsService {
   *
   */
   getClients(){
-    return new Promise<any> ( resolve => { 
-      this.http.get(`${this.baseUrl}/services/v2/clientes`, {headers: this.headers})
-      .subscribe( data => { 
-        let response =  data.json();
-        resolve(response);
-      });
-    })
+    return this.http.get(`${this.baseUrl}/services/v2/clientes`, {headers: this.headers});
   }
 
   /*
@@ -31,12 +25,6 @@ export class ClientsService {
   *
   */
   saveClient(userData){
-    return new Promise<any> ( resolve => { 
-      this.http.post(`${this.baseUrl}/services/v2/clientes`, userData, {headers: this.headers})
-      .subscribe( data => {
-        let response =  data.json();
-        resolve(response);
-      });
-    })
+    return this.http.post(`${this.baseUrl}/services/v2/clientes`, userData, {headers: this.headers})
   }
 }

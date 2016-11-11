@@ -1,7 +1,11 @@
 import {Component, ViewChild} from '@angular/core';
 import {Platform, Nav, MenuController} from 'ionic-angular';
 import {StatusBar, Splashscreen} from 'ionic-native';
+import {InitPage} from '../pages/init/init';
 import {LoginPage} from '../pages/login/login';
+import {RegisterPage} from '../pages/register/register';
+import {WelcomePage} from '../pages/welcome/welcome';
+import {OrdersPage} from '../pages/orders/orders';
 import {ProfilePage} from '../pages/profile/profile';
 import {HomePage} from '../pages/home/home';
 import {ProductlPage} from '../pages/productl/productl';
@@ -30,18 +34,14 @@ export class BazaarApp {
   // the left menu only works after login
   // the login page disables the left menu
   appPages: PageObj[] = [
-    { title: 'Login', component: LoginPage},
-    { title: 'Profile', component: ProfilePage},
-    { title: 'Home', component: HomePage},
-    { title: 'Product Details', component: ProductdPage},
-    { title: 'Product List', component: ProductlPage},
-    { title: 'Cart', component: CartPage},
-    { title: 'Checkout', component: CheckoutPage},
-    { title: 'Sales', component: SalesPage},
-    { title: 'Clients', component: ClientsPage},
-    { title: 'Products', component: ProductsPage}
+    { title: 'Account', component: ''},
+    { title: 'Reproduction', component: ''},
+    { title: 'Notifications', component: ''},
+    { title: 'Social', component: ''},
+    { title: 'About', component: ''}
   ];
-  rootPage: any = ProductsPage;
+  
+  rootPage: any = InitPage;
   constructor(
     public menu: MenuController,
     platform: Platform

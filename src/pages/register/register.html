@@ -1,0 +1,133 @@
+<ion-content class="register">
+	<span class="register-logo"></span>
+
+  <ion-list no-lines>
+    <form [formGroup]="authForm" (submit)="login(authForm.value)" novalidate>
+      <ion-item>
+        <ion-input placeholder="Nombre"  formControlName="name" type="text"></ion-input>
+      </ion-item>
+      <!--<p [hidden]="username.valid || submitted == false" danger padding-left>
+        Username is required
+      </p>-->
+
+      <ion-item>
+        <ion-input  placeholder="Nombre de usuario" formControlName="username" type="text"></ion-input>
+      </ion-item>
+      <!--<p [hidden]="password.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>-->
+
+			<ion-item>
+        <ion-input placeholder="Email" formControlName="email" type="text"></ion-input>
+      </ion-item>
+      <!--<p [hidden]="password.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>-->
+
+			<ion-item>
+				<ion-select cancelText="Cancelar" okText="Ok" formControlName="paises">
+						<ion-option value="Argentina" checked>Argentina</ion-option>
+						<ion-option value="México">México</ion-option>
+						<ion-option value="Perú">Perú</ion-option>
+						<ion-option value="Venezuela">Venezuela</ion-option>
+						<ion-option value="Dominicana">R. Dominicana</ion-option>
+						<ion-option value="Colombia">Colombia</ion-option>
+				</ion-select>
+      </ion-item>
+      <!--<p [hidden]="password.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>-->
+
+			<ion-item>
+        <ion-input placeholder="Contraseña" formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <!--<p [hidden]="password.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>-->
+
+			<ion-item>
+        <ion-input placeholder="Confirmar Contraseña" formControlName="confirm" type="password"></ion-input>
+      </ion-item>
+      <!--<p [hidden]="password.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>-->
+
+			<ion-item>
+       <span class="birthday">Cumpleaños</span>
+      </ion-item>
+
+			<ion-grid>
+			  <ion-row>
+					<ion-col width-33 text-left>
+						<ion-input class="birth-inputs" placeholder="Día" formControlName="dia" type="text"></ion-input>
+					</ion-col>
+
+					<ion-col width-33 text-center>
+          	<ion-input class="birth-inputs" placeholder="Mes" formControlName="mes" type="text"></ion-input>
+          </ion-col>
+
+					<ion-col width-33 text-right>
+          	<ion-input class="birth-inputs" placeholder="Año" formControlName="año" type="text"></ion-input>
+          </ion-col>
+			  </ion-row>
+				
+			</ion-grid>
+
+      <ion-grid class="genders">
+			  <ion-row>
+					<ion-col width-50 text-left>
+    				<ion-radio value="Mujer"></ion-radio>
+						<span class="ion-label" checked ="true">Mujer</span>
+					</ion-col>
+
+					<ion-col width-50 text-left>
+    				<ion-radio value="Hombre"></ion-radio>
+						<span class="ion-label">Hombre</span>
+          </ion-col>
+			  </ion-row>
+				
+			</ion-grid>
+
+			<ion-grid class="genders">
+			  <ion-row>
+					<ion-col width-100 text-left>
+						<span class="ion-label-terms">Acepto los términos y condiciones</span>
+						<ion-radio value="terms" checked ="true"></ion-radio>
+					</ion-col>
+			  </ion-row>
+				
+			</ion-grid>
+
+			<ion-grid class="genders">
+			  <ion-row>
+					<ion-col width-100 text-center>
+          	<button class="entry-btn" ion-button color="light" clear block  type="submit" [disabled]="!authForm.valid">Entrar</button>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+			<ion-grid class="account">
+			  <ion-row>
+					<ion-col width-100 text-left>
+          	<span class="ion-label-account" (click)="goToLogin();">¿Ya tienes cuenta?</span>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+			<ion-grid class="genders">
+			  <ion-row>
+					<ion-col width-100 text-center>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+
+      <ion-row responsive-sm>
+        <ion-col>
+          
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+
+</ion-content>

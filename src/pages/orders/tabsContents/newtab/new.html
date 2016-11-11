@@ -1,0 +1,89 @@
+<ion-content class="orders">
+
+	<ion-header>
+	<ion-toolbar color="main">
+		<ion-buttons start>
+			<button ion-button color="royal" (click)="goBackToOrders();">
+				<ion-icon name="arrow-back"></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title>Agregar Nueva Orden</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+  <ion-list no-lines>
+    <form novalidate>
+
+			<ion-grid>
+			  <ion-row>
+					<ion-col width-50 text-center>
+						<ion-input placeholder="Fecha inicial"  type="date"></ion-input>
+					</ion-col>
+         </ion-row>
+			</ion-grid>
+
+			<ion-grid>
+			  <ion-row>
+					<ion-col width-100 text-center>
+          	<ion-input placeholder="Sergio Iván Diaz Alarcón"  type="text"></ion-input>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+      <ion-grid>
+			  <ion-row>
+					<ion-col width-100 text-center>
+          	<ion-input placeholder="Observaciones"  type="text"></ion-input>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+       <ion-grid class="btn-grid">
+			  <ion-row>
+					<ion-col width-100 text-center>
+          	<button class="entry-btn" ion-button color="light" type="submit">Agregar Producto</button>
+          </ion-col>
+			  </ion-row>
+
+				<ion-row class="text-orders">
+					<ion-col width-100 text-right>
+      				<span class="birthday">Total: $ 350,000.00</span>
+              <span class="birthday boxes-text">14 Cajas</span>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+			<ion-list class="no-margin">
+				<ion-item item-left>
+				 	 <h3>Melón chino <ion-icon name="ios-information-circle-outline"></ion-icon></h3>
+					 <h4>3 Cajas / $ 600.00 unitario</h4>
+				</ion-item>
+
+				<ion-item item-left>
+				 	 <h3>Melón chino <ion-icon name="ios-information-circle-outline"></ion-icon></h3>
+					 <h4>3 Cajas / $ 600.00 unitario</h4>
+				</ion-item>
+
+				<ion-item item-left>
+				 	 <h3>Melón chino <ion-icon name="ios-information-circle-outline"></ion-icon></h3>
+					 <h4>3 Cajas / $ 600.00 unitario</h4>
+				</ion-item>
+			</ion-list>
+
+       <ion-grid class="btn-ordenar">
+			  <ion-row>
+					<ion-col width-100 text-center>
+          	<button class="entry-btn" ion-button color="light" type="submit">Ordenar</button>
+          </ion-col>
+			  </ion-row>
+      </ion-grid>
+
+      <ion-row responsive-sm>
+        <ion-col>
+          
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+
+</ion-content>

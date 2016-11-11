@@ -1,0 +1,43 @@
+<ion-content class="welcome">
+	<ion-header>
+		<ion-toolbar>
+			  <ion-icon name="arrow-back" (click)="goToLogin();"></ion-icon>
+		</ion-toolbar>
+	</ion-header>
+	<span class="welcome-logo"></span>
+ 
+  <ion-grid>
+		<ion-row>
+			<ion-col width-100 text-center>
+				 <ion-item class="item-profile">
+					<div class="item-avatar" item-center>
+						<img src="assets/imgs/avatar-user.png">
+					</div>
+				</ion-item>
+			</ion-col>
+		 </ion-row>
+
+		 <ion-row>
+			<ion-col width-100 text-center>
+				 <ion-title>
+			  	 Bienvenida
+				</ion-title>
+			</ion-col>
+		 </ion-row>
+
+		 <ion-row>
+			<ion-col width-100 text-center>
+				 <ion-title class="name">
+			  	 Johana Serrano
+				</ion-title>
+			</ion-col>
+		 </ion-row>
+
+		 <ion-row class="btn">
+			<ion-col width-100 text-center>
+        		<button class="entry-btn" ion-button color="light" type="submit" (click)="goToOrders();">Entrar a Llaneros</button>
+      		</ion-col>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

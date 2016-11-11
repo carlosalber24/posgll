@@ -1,18 +1,19 @@
 import {Component} from '@angular/core';
 import {Validators, FormBuilder } from '@angular/forms';
 import {NavController, LoadingController, AlertController, MenuController} from 'ionic-angular';
-import {WelcomePage} from '../welcome/welcome';
-import {RegisterPage} from '../register/register';
+import {ProfilePage} from '../profile/profile';
+import {LoginPage} from '../login/login';
 import {AuthService} from "../../services/auth-service";
 
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-register',
+  templateUrl: 'register.html',
   providers: [AuthService]
 })
-export class LoginPage {
+export class RegisterPage {
   public authForm:any;
   public submitted = false;
+
   constructor(
     public nav: NavController, 
     public auth: AuthService, 
@@ -22,8 +23,15 @@ export class LoginPage {
     private menuCtrl: MenuController
     ) {
     this.authForm = this.formBuilder.group({
+        name: ['', Validators.required],
         username: ['', Validators.required],
-        password: ['', Validators.required]
+        email: ['', Validators.required],
+        paises: ['', Validators.required],
+        password: ['', Validators.required],
+        confirm: ['', Validators.required],
+        dia: ['', Validators.required],
+        mes: ['', Validators.required],
+        año: ['', Validators.required]
       });
 
       this.menuCtrl.enable(false);
@@ -32,18 +40,27 @@ export class LoginPage {
   login() {
     let loadingPopup = this.createLoader();
     loadingPopup.present();
-      setTimeout(() => {
-        this.closeLoading(loadingPopup);
-        this.nav.setRoot(WelcomePage);
-      }, 1000)
+    this.auth.login(this.authForm.value).then( data => {
+      if(data){
+        setTimeout(() => {
+          this.closeLoading(loadingPopup);
+          this.nav.setRoot(ProfilePage);
+        }, 1000)
+      }
+      else{
+       this.closeLoading(loadingPopup);
+       let alert = this.alertCtrl.create({
+          title: 'Error',
+          subTitle: 'Ingrese una credencial válida',
+          buttons: ['Cerrar']
+        });
+        alert.present();
+      }
+    });
   }
 
-  goToRegister(){
-    this.nav.setRoot(RegisterPage);
-  }
-
-  goToWelcome(){
-    this.nav.setRoot(WelcomePage);
+  goToLogin(){
+    this.nav.setRoot(LoginPage);
   }
 
   // Create a loader

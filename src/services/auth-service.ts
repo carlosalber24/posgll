@@ -7,6 +7,7 @@ export class AuthService {
   public isLoggedIn: boolean;
   public authToken: any;
   private baseUrl: String = 'http://grupollaneros.azurewebsites.net';
+  public headers: any;
 
   static get parameters(){
     return [Http];
@@ -15,6 +16,8 @@ export class AuthService {
   constructor(public http: Http) {
     this.isLoggedIn = false;
     this.authToken  = null;
+    this.headers = new Headers();
+    this.headers.append('Content-Type', 'application/x-www-form-urlencoded');
   }
 
   storeUserCredentials(token){
@@ -40,11 +43,8 @@ export class AuthService {
   */
   login (userData){
 
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
     return new Promise ( resolve => { 
-      this.http.post(`${this.baseUrl}/services/usuarios/login`, userData, {headers: headers})
+      this.http.post(`${this.baseUrl}/services/usuarios/login`, userData, {headers: this.headers})
       .subscribe( data => { 
         let response =  data.json();
         console.log(response)
@@ -68,18 +68,7 @@ export class AuthService {
   * params {Object} userData
   */
   signUp (userData){
-
-    console.log(userData);
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
-    return new Promise ( resolve => { 
-      this.http.post(`${this.baseUrl}/services/usuarios`, userData, {headers: headers})
-      .subscribe( data => {
-        let response =  data.json();
-        console.log(response);
-      });
-    })
+    return this.http.post(`${this.baseUrl}/services/usuarios`, userData, {headers: this.headers});
   }
 
 

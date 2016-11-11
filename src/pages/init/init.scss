@@ -1,0 +1,25 @@
+page-init {
+  .init {
+    background: url('../assets/imgs/background.jpg') no-repeat center;
+    background-size: 100% 100%;
+    h2 {
+      margin:0 0 5px;
+      color:#FFF;
+      font-size:16px;
+      text-align:center;
+    }
+
+    .init-logo {
+      display:block;
+      width:200px;
+      height:95px;
+      background:url('../assets/imgs/login-logo-2.png');
+      background-size:100% 100%;
+      margin:250px auto 20px;
+
+      @media screen and (min-width: 600px) {
+        margin:120px auto 60px;
+      }
+    }
+  }
+}

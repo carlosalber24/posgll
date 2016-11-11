@@ -1,0 +1,89 @@
+<ion-content class="orders">
+	<ion-header>
+	<ion-toolbar color="main">
+		<ion-buttons start>
+			<button ion-button color="royal" (click)="goBackToWelcome();">
+				<ion-icon name="arrow-back"></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title>Ordenes</ion-title>
+		<ion-buttons end>
+      		<button ion-button color="royal">
+        		<ion-icon name="add-circle"></ion-icon>
+      		</button>
+    	</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+  <ion-list no-lines>
+    <form novalidate>
+
+			<ion-grid>
+			  <ion-row>
+					<ion-col width-50 text-center>
+						<ion-input placeholder="Fecha inicial"  type="date"></ion-input>
+					</ion-col>
+
+					<ion-col width-50 text-center>
+          	<ion-input placeholder="Fecha Final"  type="date"></ion-input>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+			<ion-grid>
+			  <ion-row>
+					<ion-col width-50 text-center>
+						<ion-input placeholder="Vendedor"  type="text"></ion-input>
+					</ion-col>
+
+					<ion-col width-50 text-center>
+          	<ion-input placeholder="Status"  type="text"></ion-input>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+      <ion-grid class="btn-grid">
+			  <ion-row>
+					<ion-col width-100 text-center>
+          	<button class="entry-btn" ion-button color="light" type="submit" (click)="goToOrders();">Buscar</button>
+          </ion-col>
+			  </ion-row>
+
+				<ion-row class="text-orders">
+					<ion-col width-100 text-left>
+      				<span class="birthday">Ordenes de Compras Actuales</span>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+			<ion-list class="no-margin">
+				<ion-item item-left>
+				 	 <h3>Sergio Díaz <ion-icon name="ios-information-circle-outline"></ion-icon></h3>
+					 <h4>$ 35,000.00 / Por cobrar</h4>
+				</ion-item>
+
+				<ion-item item-left>
+				 	 <h3>Sergio Díaz <ion-icon name="ios-information-circle-outline"></ion-icon></h3>
+					 <h4>$ 35,000.00 / Por cobrar</h4>
+				</ion-item>
+
+				<ion-item item-left>
+				 	 <h3>Sergio Díaz <ion-icon name="ios-information-circle-outline"></ion-icon></h3>
+					 <h4>$ 35,000.00 / Por cobrar</h4>
+				</ion-item>
+
+				<ion-item item-left>
+				 	 <h3>Sergio Díaz <ion-icon name="ios-information-circle-outline"></ion-icon></h3>
+					 <h4>$ 35,000.00 / Por cobrar</h4>
+				</ion-item>
+			</ion-list>
+
+      <ion-row responsive-sm>
+        <ion-col>
+          
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+
+</ion-content>

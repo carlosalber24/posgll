@@ -35,8 +35,8 @@ export class ClientsPage {
   * Method to call get clients service
   */
   getClients(){
-    this.clients.getClients().then( data =>{
-      this.clientsData = data;
+    this.clients.getClients().subscribe( data => {
+      this.clientsData = data.json();
     })
   }
   
@@ -81,8 +81,8 @@ export class ClientsPage {
   saveClient(data){
     if(data.Email != "" && data.Nombre != ""){
       this.dataToSend = 'Apellido=algo&CreditoActual=0&CreditoMax=0&CreditoMin=0&DireccinOficina=465456&Email='+data.Email+'&EmailOficina=algo&Enable=true&Nombre='+data.Nombre+'&PersonaMoral=false&Telefono=12244&TelefonoOficina=ads&Password=1234'; 
-      this.clients.saveClient(this.dataToSend).then(data =>{
-       this.clientsData.push(data);
+      this.clients.saveClient(this.dataToSend).subscribe( data => { 
+       this.clientsData.push(data.json());
        this.showConfirm('!Hecho!', 'El cliente se registró satisfactoriamente');
      })
     }else{

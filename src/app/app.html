@@ -1,11 +1,11 @@
 <ion-menu id="loggedInMenu" [content]="content">
-  <ion-toolbar color="theme">
-    <ion-title>POSGLL</ion-title>
+  <ion-toolbar color="main">
+    <ion-title>Grupo Llanero</ion-title>
   </ion-toolbar>
   <ion-content class="outer-content">
 
-    <ion-list no-lines>
-      <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)">
+    <ion-list no-lines class="list-menu">
+      <button ion-item menuClose *ngFor="let p of appPages">
         {{p.title}}
       </button>
     </ion-list>

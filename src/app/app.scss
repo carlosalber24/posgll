@@ -355,3 +355,7 @@ input[type="submit"] {
 .themebg {
   background:map-get($colors,theme);
 }
+
+ion-list.list-menu{
+  margin-top: 50px !important;
+}

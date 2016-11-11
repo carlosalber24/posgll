@@ -1,0 +1,124 @@
+<ion-content class="orders">
+
+	<ion-header>
+	<ion-toolbar color="main">
+		<ion-buttons start>
+			<button ion-button color="royal" (click)="goBackToOrders();">
+				<ion-icon name="arrow-back"></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title>Productos</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+  <ion-list no-lines>
+			<ion-grid>
+			  <ion-row>
+					<ion-col width-50 text-center>
+						<ion-input placeholder="Cajas"  type="text"></ion-input>
+					</ion-col>
+
+					<ion-col width-50 text-center>
+						<ion-input placeholder="Precios"  type="text"></ion-input>
+					</ion-col>
+         </ion-row>
+			</ion-grid>
+
+			<ion-grid>
+			  <ion-row>
+					<ion-col width-100 text-center>
+          	<ion-input placeholder="Productos"  type="text"></ion-input>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+      <ion-grid>
+			  <ion-row>
+					<ion-col width-50 text-center>
+          	<ion-select [(ngModel)]="products.product" cancelText="Cancelar" okText="Ok">
+							<ion-option value="Producto 1" checked>Producto 1</ion-option>
+							<ion-option value="Producto 2">Producto 2</ion-option>
+				    </ion-select>
+          </ion-col>
+			  </ion-row>
+			</ion-grid>
+
+       <ion-grid class="btn-grid">
+			  <ion-row>
+					<ion-col width-100 text-center>
+          	<button class="entry-btn" ion-button color="light" type="submit">Buscar</button>
+          </ion-col>
+			  </ion-row>
+
+					<div padding>
+						<ion-segment [(ngModel)]="tipo">
+							<ion-segment-button value="hoy" class="segment-button segment-activated">
+								Hoy
+							</ion-segment-button>
+							<ion-segment-button value="bodega">
+								Bodega
+							</ion-segment-button>
+
+							<ion-segment-button value="articulos">
+								Mis Artículos
+							</ion-segment-button>
+						</ion-segment>
+				 </div>
+
+				 	<div [ngSwitch]="tipo">
+						<ion-list *ngSwitchCase="'hoy'" class="no-margin">
+								<ion-item item-left>
+									<h3>Camión ZAQWSX34 </h3>
+									<h4>Melón chino / 100 cajas / $ 120.00 unitario</h4>
+								</ion-item>
+
+								<ion-item item-left>
+									<h3>Camión ZAQWSX34</h3>
+									<h4>Melón chino / 100 cajas / $ 120.00 unitario</h4>
+								</ion-item>
+
+								<ion-item item-left>
+									<h3>Camión ZAQWSX34</h3>
+									<h4>Melón chino / 100 cajas / $ 120.00 unitario</h4>
+								</ion-item>
+						</ion-list>
+
+						<ion-list *ngSwitchCase="'bodega'" class="no-margin">
+								<ion-item item-left>
+									<h3>Camión ZAQWSX34</h3>
+									<h4>Melón chino / 100 cajas / $ 120.00 unitario</h4>
+								</ion-item>
+
+								<ion-item item-left>
+									<h3>Camión ZAQWSX34</h3>
+									<h4>Melón chino / 100 cajas / $ 120.00 unitario</h4>
+								</ion-item>
+
+						</ion-list>
+
+						<ion-list *ngSwitchCase="'articulos'" class="no-margin">
+								<ion-item item-left>
+									<h3>Camión ZAQWSX34</h3>
+									<h4>Melón chino / 100 cajas / $ 120.00 unitario</h4>
+								</ion-item>
+
+						</ion-list>
+	 			</div>
+			</ion-grid>
+
+       <ion-grid class="btn-ordenar">
+			  <ion-row>
+					<ion-col width-100 text-center>
+          	<button class="entry-btn" ion-button color="light" type="submit">Ordenar</button>
+          </ion-col>
+			  </ion-row>
+      </ion-grid>
+
+      <ion-row responsive-sm>
+        <ion-col>
+          
+        </ion-col>
+      </ion-row>
+  </ion-list>
+
+</ion-content>

@@ -1,6 +1,5 @@
 <ion-content class="login">
 	<span class="login-logo"></span>
-	<h2>Login</h2>
 
   <ion-list no-lines>
     <form [formGroup]="authForm" (submit)="login(authForm.value)" novalidate>
@@ -22,48 +21,47 @@
       <ion-grid>
 			  <ion-row>
 					<ion-col width-50 text-left>
-						<a href="#">Register</a>
+						<a href="#">Olvidaste tu contraseña?</a>
 					</ion-col>
 
 					<ion-col width-50 text-right>
-						<a href="#">Forgot Password</a>
-					</ion-col>
+          	<button class="entry-btn" ion-button color="light" clear block  type="submit">Entrar</button>
+          </ion-col>
 			  </ion-row>
 			</ion-grid>
 
 
       <ion-row responsive-sm>
         <ion-col>
-          <button ion-button color="light" clear block  type="submit" [disabled]="!authForm.valid">Entrar</button>
+          
         </ion-col>
       </ion-row>
     </form>
   </ion-list>
-	<!--<div class="social-connect">
-		<h2>Connect using</h2>
+	<div class="social-connect">
 		<ion-list no-lines>
 			<ion-item>
 				<ion-grid>
 					<ion-row text-center>
-						<ion-col width-33>
-							<button ion-button clear color="light">
-								<ion-icon class="custom-icon twitter-white-icon"></ion-icon>
-							</button>
-						</ion-col>
-						<ion-col width-33>
-							<button ion-button  clear color="light">
+						<ion-col width-100>
+							<button ion-button clear color="light" class="social-btn fcb">
 								<ion-icon class="custom-icon facebook-white-icon"></ion-icon>
+								Regístrate con Facebook
 							</button>
 						</ion-col>
-						<ion-col width-33>
-							<button ion-button clear color="light">
-								<ion-icon class="custom-icon google-white-icon"></ion-icon>
+					</ion-row>
+
+					<ion-row text-center>
+						<ion-col width-100>
+							<button ion-button  clear color="light" class="social-btn email" (click)="goToRegister();">
+								<ion-icon class="custom-icon"></ion-icon>
+								Regístrate con tu Email
 							</button>
 						</ion-col>
 					</ion-row>
 				</ion-grid>
 			</ion-item>
 		</ion-list>
-	</div>-->
+	</div>
 
 </ion-content>

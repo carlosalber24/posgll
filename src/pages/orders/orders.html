@@ -1,0 +1,10 @@
+<ion-content class="orders">
+
+ <ion-tabs class="tabs-icon-text" color="light">
+    <ion-tab tabIcon="apps" tabTitle="Ordenes" [root]="rootPage.orders"></ion-tab>
+    <ion-tab tabIcon="add-circle" tabTitle="Nueva" [root]="rootPage.new" (click)="changeTitle('new');"></ion-tab>
+    <ion-tab tabIcon="logo-dropbox" tabTitle="Productos" [root]="rootPage.products"></ion-tab>
+    <ion-tab tabIcon="settings" tabTitle="Configuración" [root]="rootPage.settings"></ion-tab>
+</ion-tabs>
+
+</ion-content>
